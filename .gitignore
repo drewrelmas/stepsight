@@ -1,0 +1,27 @@
+# Data directory
+data/
+
+# Python
+backend/**/__pycache__/
+backend/**/*.pyc
+venv/
+backend/venv/
+
+# Environment variables
+.env
+.env.local
+backend/.env*
+frontend/.env*
+
+# React frontend
+frontend/node_modules/
+frontend/build/
+
+# IDE and OS files
+.vscode/
+.DS_Store
+*.swp
+*~
+
+# Logs
+*.log
