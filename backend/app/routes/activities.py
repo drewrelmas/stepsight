@@ -43,6 +43,9 @@ async def list_activities():
             "total_count": len(activities),
             "activities": activities
         }
+    except HTTPException:
+        # Re-raise HTTPExceptions (like 404) as-is
+        raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error reading activities: {str(e)}")
 
