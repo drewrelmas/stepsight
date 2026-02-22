@@ -1,6 +1,26 @@
-# StepSight - Barebones
+# StepSight
 
-An ultra-minimal fitness data explorer stripped down to essentials.
+A fitness data explorer intended to read and display information from 2 types of data file:
+
+* **.tcx**: [Training Center XML](https://fileinfo.com/extension/tcx)
+* **.fit**: [Flexible and Interoperable Data Transfer](https://developer.garmin.com/fit/overview/)
+
+Both of these are file types are published and owned by [Garmin Ltd](https://www.garmin.com/en-US/). This is a personal project without any intention of further distribution. 
+
+The main usage is reading an export drop from Strava if using that service:
+
+```
+export/
+├── activities.csv
+└── activities/
+    ├── activity1.tcx.gz/
+    │   └── activity1.tcx
+    ├── activity2.fit.gz/
+    │   └── activity2.fit
+    └── ...
+```
+
+One possible way to get data in this format is the [bulk export procedure provided by Strava](https://support.strava.com/hc/en-us/articles/216918437-Exporting-your-Data-and-Bulk-Export) if using that service.
 
 ## Quick Start
 
