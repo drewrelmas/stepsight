@@ -25,8 +25,8 @@ One possible way to get data in this format is the [bulk export procedure provid
 ## Quick Start
 
 ### Prerequisites
-- Python 3.7+ (for backend)
-- Node.js 14+ (for frontend)
+- Python 3.9+ (for backend)
+- Node.js 18+ (for frontend)
 
 ### Installation & Setup
 

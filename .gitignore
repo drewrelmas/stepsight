@@ -6,6 +6,7 @@ backend/**/__pycache__/
 backend/**/*.pyc
 venv/
 backend/venv/
+backend/.pytest_cache/
 
 # Environment variables
 .env
