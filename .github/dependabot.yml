@@ -9,13 +9,29 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
     reviewers:
       - "drewrelmas"  # Replace with your GitHub username
     commit-message:
       prefix: "chore(deps):"
       prefix-development: "chore(deps-dev):"
       include: "scope"
+    groups:
+      backend-dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "pytest*"
+          - "black"
+          - "flake8"
+          - "mypy"
+      backend-dev-dependencies:
+        patterns:
+          - "pytest*"
+          - "black"
+          - "flake8"
+          - "mypy"
+        dependency-type: "development"
       
   # Node.js dependencies (frontend)  
   - package-ecosystem: "npm"
@@ -24,7 +40,7 @@ updates:
       interval: "weekly" 
       day: "monday"
       time: "09:00"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
     reviewers:
       - "drewrelmas"  # Replace with your GitHub username
     commit-message:
@@ -37,6 +53,25 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "@types/react*"
         update-types: ["version-update:semver-major"]
+    groups:
+      frontend-dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@types/*"
+          - "eslint*"
+          - "prettier"
+          - "jest"
+          - "@testing-library/*"
+        dependency-type: "production"
+      frontend-dev-dependencies:
+        patterns:
+          - "@types/*"
+          - "eslint*"
+          - "prettier"
+          - "jest"
+          - "@testing-library/*"
+        dependency-type: "development"
         
   # GitHub Actions dependencies
   - package-ecosystem: "github-actions"
@@ -46,3 +81,7 @@ updates:
     commit-message:
       prefix: "chore(actions):"
       include: "scope"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
