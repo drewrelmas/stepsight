@@ -23,7 +23,7 @@ async def list_activities():
         csv_path = os.path.join(DATA_PATH, "activities.csv")
         
         if not os.path.exists(csv_path):
-            raise HTTPException(status_code=404, detail="Activities file not found")
+            raise HTTPException(status_code=404, detail="Activities file not found at path: " + csv_path)
         
         df = pd.read_csv(csv_path)
         

@@ -1,6 +1,4 @@
-"""
-Basic tests for StepSight API
-"""
+"""Basic tests for StepSight API"""
 import os
 import pytest
 import tempfile
@@ -11,7 +9,7 @@ from unittest.mock import patch, MagicMock
 os.environ['STEPSIGHT_DATA_PATH'] = '/mock/path'
 
 from fastapi.testclient import TestClient
-from main import app
+from backend.main import app
 
 client = TestClient(app)
 
