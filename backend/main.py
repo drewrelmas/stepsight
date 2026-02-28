@@ -2,7 +2,7 @@ import os
 import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes import activities
+from .app.routes import activities
 
 logger = logging.getLogger("uvicorn.app")
 
